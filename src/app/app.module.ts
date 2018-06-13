@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomHttpInterceptor } from './CustomHttpInterceptor';
 import { AddressFormComponent } from './layout/address-form/address-form.component';
 import { AddressAutoCompleteComponent } from 'src/app/layout/address-form/AddressAutoComplete.component';
-import {AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -31,11 +31,7 @@ import {AgmCoreModule } from '@agm/core';
     AppMaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule,
-    AgmCoreModule.forRoot({
-      apiKey: '',
-      libraries: ['places']
-    }),
+    FormsModule
   ],
   providers: [
      ClientDto,
