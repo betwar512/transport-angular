@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ClientDto } from './modeldtos/ClientDto';
+import { APPCONFIG } from 'src/app/MainAppConfig';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,13 @@ import { ClientDto } from './modeldtos/ClientDto';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
-  ;
+export class AppComponent implements OnInit {
+  public AppConfig: any;
+  ngOnInit(): void {
+    this.AppConfig = APPCONFIG;
+  }
 
-  title = 'transport-external-project';
-
-  constructor(public client : ClientDto){
+  constructor(public client: ClientDto) {
     client = new ClientDto();
   }
 

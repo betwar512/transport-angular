@@ -7,10 +7,12 @@ import { AppMaterialModule } from 'src/app/material.module';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
 import { ClientDto } from 'src/app/modeldtos/ClientDto';
 import { ClientFormComponent } from 'src/app/ui-componenets/client-form/client-form.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UploadServiceService } from './services/upload-service.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomHttpInterceptor } from './CustomHttpInterceptor';
+
 
 @NgModule({
   declarations: [
@@ -24,12 +26,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppMaterialModule,
     HttpClientModule,
-    ReactiveFormsModule, // <-- #2 add to @NgModule imports
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [
      ClientDto,
-     UploadServiceService ],
+     UploadServiceService,
+     {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CustomHttpInterceptor,
+      multi: true,
+    }
+    ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}
+
