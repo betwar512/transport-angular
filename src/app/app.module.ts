@@ -27,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule, // <-- #2 add to @NgModule imports
     FormsModule
   ],
-  providers: [ClientDto,UploadServiceService],
+  providers: [
+     ClientDto,
+     UploadServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
