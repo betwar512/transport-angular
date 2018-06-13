@@ -23,10 +23,10 @@ import { FormControl } from '@angular/forms';
 
     ngOnInit(): void {
      this.searchControl = new FormControl();
-     const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ['address']
-      });
-      autocomplete.addListener('place_changed', () => { });
-    }
+    //  const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+    //     types: ['address']
+    //   });
+    //   autocomplete.addListener('place_changed', () => { });
+   }
 
   }
