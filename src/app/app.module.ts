@@ -6,12 +6,13 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AppMaterialModule } from 'src/app/material.module';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
 import { ClientDto } from 'src/app/modeldtos/ClientDto';
-import { ClientFormComponent } from 'src/app/ui-componenets/client-form/client-form.component';
+import { ClientFormComponent } from 'src/app/layout/ui-componenets/client-form/client-form.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UploadServiceService } from './services/upload-service.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomHttpInterceptor } from './CustomHttpInterceptor';
+import { AddressFormComponent } from './layout/address-form/address-form.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CustomHttpInterceptor } from './CustomHttpInterceptor';
     AppComponent,
     MainPageComponent,
     HeaderComponent,
-    ClientFormComponent
+    ClientFormComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ClientDto } from '../../modeldtos/ClientDto';
+import { ClientDto } from 'src/app/modeldtos/ClientDto';
+
 
 
 @Component({
@@ -17,8 +18,7 @@ export class ClientFormComponent implements OnInit {
   }
 
 
-  onSubmit(){
-    //TODO do something with client 
+  onSubmit() {
     console.log(this.client);
   }
 
