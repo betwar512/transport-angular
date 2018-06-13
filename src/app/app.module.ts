@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomHttpInterceptor } from './CustomHttpInterceptor';
 import { AddressFormComponent } from './layout/address-form/address-form.component';
+import { AddressAutoCompleteComponent } from 'src/app/layout/address-form/AddressAutoComplete.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AddressFormComponent } from './layout/address-form/address-form.compone
     MainPageComponent,
     HeaderComponent,
     ClientFormComponent,
-    AddressFormComponent
+    AddressFormComponent,
+    AddressAutoCompleteComponent
   ],
   imports: [
     BrowserModule,
