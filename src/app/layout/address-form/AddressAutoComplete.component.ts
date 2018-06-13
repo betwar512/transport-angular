@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 
 @Component({
@@ -14,6 +15,18 @@ import { Component } from '@angular/core';
       </div>
     `
   })
-  export class AddressAutoCompleteComponent {
-    searchControl: string;
+  export class AddressAutoCompleteComponent implements OnInit {
+    public searchControl: FormControl;
+
+    @ViewChild('search')
+    public searchElementRef: ElementRef;
+
+    ngOnInit(): void {
+     this.searchControl = new FormControl();
+     const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+        types: ['address']
+      });
+      autocomplete.addListener('place_changed', () => { });
+    }
+
   }
