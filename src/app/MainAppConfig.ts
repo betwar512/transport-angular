@@ -20,8 +20,8 @@ export const APPCONFIG = makeAppConfig();
 
 
 export class MainAppConfig {
-    public static              API =   'http://localhost:443';
+    public static              API =   'http://10.6.2.248:8080/jserv/jserv';
     public static        CLIENT_ID =   '' ;
     public static   GOOGLE_API_KEY =   'AIzaSyC0issMIvDUUJGO-_SkOakauyChv6wyTP8' ;
-    public static        TOKEN_KEY =   'currentUser';
+    public static        TOKEN_KEY =   'SESSION_TOKEN_KEY';
 }

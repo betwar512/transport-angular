@@ -3,21 +3,19 @@
   <mat-card id="client_form_card"> 
       <mat-card-header>
           <mat-card-title> <h4>{{formTitle}}</h4></mat-card-title>
-          <mat-card-subtitle>Use this form to add new client to Ozpol System </mat-card-subtitle>
+          <mat-card-subtitle>{{subTitle}} </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <form>
           <div class="form-group row">
-
             <div class="col-5">
               <mat-form-field class="full-width mat-icon-left">
                 <input [(ngModel)]="client.firstName" matInput name="firstname" placeholder="First name">
               </mat-form-field>
             </div>
             <div class="col-5">
-                <mat-form-field class="full-width mat-icon-left">
-            
-                  <input [(ngModel)]="client.lastName" matInput name="lastname" placeholder="Last Name">
+                <mat-form-field class="full-width mat-icon-left">    
+                <input [(ngModel)]="client.lastName" matInput name="lastname" placeholder="Last Name">
                 </mat-form-field>
               </div>
               <div class="col-12"></div>
@@ -31,13 +29,19 @@
                   </div>
                 <div class="col-12"></div>
                 <div class="col-3">
-
+                
                     <mat-form-field>
                         <input matInput [matDatepicker]="picker" placeholder="Choose a date">
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
                       </mat-form-field>
                   </div>
+                  <div class="col-12"></div>
+                <div class="col-md-3">
+                    <mat-form-field class="full-width mat-icon-left">
+                        <input [(ngModel)]="client.email" matInput name="email address" type="email" placeholder="email@example.com.au">
+                      </mat-form-field>
+                </div>  
                 
           </div>
           <!-- End of form  -->

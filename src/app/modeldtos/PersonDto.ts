@@ -7,9 +7,9 @@ export class PersonDto {
 
     public phoneno  : string;
 
-    public bestcontact: string;
+    public   email  : string;
 
-    public address: string;
+    public bestcontact: string;
 
     public geneder: string;
 

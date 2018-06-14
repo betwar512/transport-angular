@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
 import { AppMaterialModule } from 'src/app/material.module';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
 import { PersonDto } from 'src/app/modeldtos/PersonDto';
@@ -17,17 +16,25 @@ import { AddressAutoCompleteComponent } from 'src/app/layout/ui-componenets/addr
 import { FooterComponent } from 'src/app/layout/footer/footer.component';
 import { AddressDto } from 'src/app/modeldtos/AddressDto';
 import { RequestDto } from 'src/app/modeldtos/RequestDto';
+import { MainApiService } from 'src/app/services/main-api.service';
+
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { MainPageComponent } from 'src/app/pages/main-page/main-page.component';
+import { LoginPageComponent } from 'src/app/pages/login-page/login-page.component';
+import { AuthGuard } from './services/auth/auth.gard';
+import { LoginDto } from './services/auth/loginDto';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
     HeaderComponent,
     FooterComponent,
     ClientFormComponent,
     AddressFormComponent,
-    AddressAutoCompleteComponent
+    AddressAutoCompleteComponent,
+    MainPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +42,7 @@ import { RequestDto } from 'src/app/modeldtos/RequestDto';
     AppMaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [
@@ -42,6 +50,9 @@ import { RequestDto } from 'src/app/modeldtos/RequestDto';
      RequestDto,
      AddressDto,
      UploadServiceService,
+     MainApiService,
+     AuthGuard,
+     LoginDto,
      {
       provide: HTTP_INTERCEPTORS,
       useClass: CustomHttpInterceptor,

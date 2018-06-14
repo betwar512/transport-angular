@@ -124,5 +124,10 @@
       }
     }
   },
-  "defaultProject": "transport-external-project"
+  "defaultProject": "transport-external-project",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

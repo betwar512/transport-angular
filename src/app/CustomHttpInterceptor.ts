@@ -11,8 +11,8 @@ import { MainAppConfig } from './MainAppConfig';
 export class CustomHttpInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
       // console.log('Intercept');
-      const  authReq: HttpRequest<any> =  req.clone( {headers : this.getHeaderAuth(req.headers)} );
-      return next.handle(authReq);
+    //  const  authReq: HttpRequest<any> =  req.clone( {headers : this.getHeaderAuth(req.headers)} );
+      return next.handle(req);
   }
 /**
  *

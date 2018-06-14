@@ -1,0 +1,32 @@
+<div class="col-4 offset-md-4">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form>
+          <div class="form-group row">
+            <div class="col-7">
+              <mat-form-field class="full-width mat-icon-left">
+                <input [(ngModel)]="username" matInput name="username" placeholder="Username">
+              </mat-form-field>
+            </div>
+            <div class="col-7">
+              <mat-form-field class="full-width mat-icon-left">
+                <input [(ngModel)]="password" type="password" matInput name="password" placeholder="Password">
+              </mat-form-field>
+
+            </div>
+          </div>
+        </form>
+      </mat-card-content>
+
+
+      <mat-card-actions align="start">
+        <button mat-raised-button color="primary" (click)=loginRequest()>Login</button>
+      </mat-card-actions>
+
+    </mat-card>
+
+  </div>

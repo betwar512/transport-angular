@@ -12,18 +12,14 @@ export class ClientFormComponent implements OnInit {
 
   @Input() public client: PersonDto;
   @Input() public formTitle: string = "Title";
+  @Input() public subTitle: string = '';
   startDate = new Date(1965, 0, 1);
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-
-  onSubmit() {
     console.log(this.client);
   }
-
 
 
 }
