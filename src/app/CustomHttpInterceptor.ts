@@ -35,4 +35,24 @@ export class CustomHttpInterceptor implements HttpInterceptor {
     // console.log(headerAuth.keys());
     return headerAuth;
   }
+
+
+private createGalaxyHeader(reqHeader: HttpHeaders): HttpHeaders{
+    // siteinterface="ANDROID";
+
+    // hashcode   = null;
+    // apptype    = BuildConfig.APPLICATION_ID;
+    // osversion  = Build.VERSION.INCREMENTAL;
+    // appversion = BuildConfig.VERSION_NAME;
+    // phonemodel = Build.MODEL;
+    //   deviceid   = "";
+    // devicename = Build.BRAND  + " " + Build.MODEL;
+
+
+    let headerAuth: HttpHeaders = reqHeader;
+    headerAuth =  headerAuth.append('Access-Control-Allow-Credentials', 'true');
+
+     return headerAuth;
+}
+
 }

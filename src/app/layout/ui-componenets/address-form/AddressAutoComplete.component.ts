@@ -1,6 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { } from 'googlemaps';
 
 @Component({
     selector: 'app-autocomplete',
@@ -13,20 +12,20 @@ import { } from 'googlemaps';
     `
   })
   export class AddressAutoCompleteComponent implements OnInit {
-    public searchControl: FormControl;
+    // public searchControl: FormControl;
 
-    @ViewChild('search')
-    public searchElementRef: ElementRef;
+    // @ViewChild('search')
+    // public searchElementRef: ElementRef;
 
     ngOnInit(): void {
-     this.searchControl = new FormControl();
-     const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ['address']
-      });
-      autocomplete.addListener('place_changed', () => {
-         let place =  autocomplete.getPlace();
-         console.log(place);
-       });
-   }
+    //  this.searchControl = new FormControl();
+    //  const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+    //     types: ['address']
+    //   });
+    //   autocomplete.addListener('place_changed', () => {
+    //      let place =  autocomplete.getPlace();
+    //      console.log(place);
+    //    });
+     }
 
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ClientDto } from 'src/app/modeldtos/ClientDto';
+import { PersonDto } from 'src/app/modeldtos/PersonDto';
 
 
 
@@ -10,7 +10,9 @@ import { ClientDto } from 'src/app/modeldtos/ClientDto';
 })
 export class ClientFormComponent implements OnInit {
 
-  @Input() public client: ClientDto;
+  @Input() public client: PersonDto;
+  @Input() public formTitle: string = "Title";
+  startDate = new Date(1965, 0, 1);
 
   constructor() { }
 

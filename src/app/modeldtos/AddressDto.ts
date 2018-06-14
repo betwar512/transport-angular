@@ -1,6 +1,8 @@
 
 export class AddressDto{
 
+    public completeaddresss: string;
+
     public subpremise :string ;
 
     public street_number :string ;
@@ -18,7 +20,7 @@ export class AddressDto{
     public  postal_code:string ;
 
     public  lat:Number ;
-    
+
     public  lng:Number;
 
 }

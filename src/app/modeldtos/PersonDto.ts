@@ -1,5 +1,5 @@
 
-export class ClientDto {
+export class PersonDto {
 
     public firstName: string;
 
@@ -8,7 +8,7 @@ export class ClientDto {
     public phoneno  : string;
 
     public bestcontact: string;
-    
+
     public address: string;
 
     public geneder: string;

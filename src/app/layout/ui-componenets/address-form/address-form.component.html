@@ -1,13 +1,44 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Address</mat-card-title>
-        <mat-card-subtitle>find by google </mat-card-subtitle>
+        <mat-card-title><h4>{{formTitle}}</h4></mat-card-title>
+        <mat-card-subtitle>find by google</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
 
     <div class="col-md-6">
 
-        <app-autocomplete></app-autocomplete>
+   <!-- <app-autocomplete></app-autocomplete> -->
+
+   <form class="address-form">
+
+        <mat-form-field class="address-full-width">
+                <input placeholder="Find by Google" matInput autocorrect="off" autocapitalize="off" spellcheck="off"
+                 type="text" class="form-control" #search [formControl]="searchControl">
+            </mat-form-field>
+
+
+  <p>
+    <mat-form-field class="address-full-width">
+      <textarea matInput placeholder="Address"  name="Address" [(ngModel)]="address.street_number"></textarea>
+    </mat-form-field>
+    <mat-form-field class="address-full-width">
+      <textarea matInput placeholder="Address 2"  name="Address2" [(ngModel)]="address.route"></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="address-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="address-full-width">
+      <input matInput placeholder="City"  name="city" [(ngModel)]="address.administrative_area_level_2">
+    </mat-form-field></td>
+    <td><mat-form-field class="address-full-width">
+      <input matInput placeholder="State"  name="state" [(ngModel)]="address.administrative_area_level_1">
+    </mat-form-field></td>
+    <td><mat-form-field class="address-full-width">
+      <input matInput #postalCode maxlength="5"  name="postcode" placeholder="Postal Code" value="" [(ngModel)]="address.postal_code">
+    </mat-form-field></td>
+  </tr></table>
+</form>
+
 
     </div>
     </mat-card-content>
