@@ -1,20 +1,14 @@
-<<mat-card>
-
+<mat-card>
     <mat-card-header>
-        <mat-card-title>Title</mat-card-title>
-        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        <mat-card-title>Address</mat-card-title>
+        <mat-card-subtitle>find by google </mat-card-subtitle>
     </mat-card-header>
- 
-
     <mat-card-content>
-      <app-autocomplete></app-autocomplete>
-    </mat-card-content>
 
-    <mat-card-actions align="start">
-        <button mat-button (click)="onAction1">Action1</button>
-        
-    </mat-card-actions>
-    <mat-card-footer>
- 
-    </mat-card-footer>
+    <div class="col-md-6">
+
+        <app-autocomplete></app-autocomplete>
+
+    </div>
+    </mat-card-content>
 </mat-card>

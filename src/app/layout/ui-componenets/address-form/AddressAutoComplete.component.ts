@@ -6,13 +6,10 @@ import { } from 'googlemaps';
     selector: 'app-autocomplete',
     styles: [``],
     template: `
-      <div class="container">
-        <h3>enter address</h3>
         <div class="form-group">
           <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off"
            type="text" class="form-control" #search [formControl]="searchControl">
         </div>
-      </div>
     `
   })
   export class AddressAutoCompleteComponent implements OnInit {
@@ -26,7 +23,10 @@ import { } from 'googlemaps';
      const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         types: ['address']
       });
-      autocomplete.addListener('place_changed', () => { });
+      autocomplete.addListener('place_changed', () => {
+         let place =  autocomplete.getPlace();
+         console.log(place);
+       });
    }
 
   }
