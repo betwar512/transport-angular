@@ -12,8 +12,9 @@ import { UploadServiceService } from './services/upload-service.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomHttpInterceptor } from './CustomHttpInterceptor';
-import { AddressFormComponent } from './layout/address-form/address-form.component';
-import { AddressAutoCompleteComponent } from 'src/app/layout/address-form/AddressAutoComplete.component';
+import { AddressFormComponent } from './layout/ui-componenets/address-form/address-form.component';
+import { AddressAutoCompleteComponent } from 'src/app/layout/ui-componenets/address-form/AddressAutoComplete.component';
+import { FooterComponent } from 'src/app/layout/footer/footer.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AddressAutoCompleteComponent } from 'src/app/layout/address-form/Addres
     AppComponent,
     MainPageComponent,
     HeaderComponent,
+    FooterComponent,
     ClientFormComponent,
     AddressFormComponent,
     AddressAutoCompleteComponent
